@@ -20,9 +20,9 @@ throughout the course as new blog posts become available.
 The list of blog posts below only shows the most recent posts. **To
 view all blog posts, click on "all posts" below.**
 
-Names of student groups (in order of sign-up):
+Names of student groups:
 
-  * 
+  * NewPotential
 
 The source code of this blog is available on
 [GitHub](https://github.com/buehlmaier/FINA4350-student-blog-2024-01).
