@@ -26,7 +26,8 @@ Names of student groups:
 
   * ESG & Volatility
   * NewPotential
-  * Textonomy 
+  * Textonomy
+  * TheWay 
 
 The source code of this blog is available on
 [GitHub](https://github.com/buehlmaier/FINA4350-student-blog-2024-01).
