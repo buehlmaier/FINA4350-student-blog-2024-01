@@ -1,5 +1,5 @@
 ---
-Title: Ideation - What, How, Why and Why not (By Group "TheWay")
+Title: Ideation - What, How, Why, and Why Not (By Group "TheWay")
 Date: 2024-03-03 14:00
 Category: Progress Report
 Tags: Group TheWay 

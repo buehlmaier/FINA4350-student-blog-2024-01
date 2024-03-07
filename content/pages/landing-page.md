@@ -26,6 +26,7 @@ Names of student groups:
 
   * ESG & Volatility
   * NewPotential
+  * SalesEQ
   * Textonomy
   * TheWay 
 
