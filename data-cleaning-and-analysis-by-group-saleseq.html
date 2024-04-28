@@ -17,16 +17,16 @@
 
 <meta name="keywords" content="Group SalesEQ, Progress Report, " />
 
-<meta property="og:title" content="Dependent Data Selection (by Group &#34;SalesEQ&#34;) "/>
-<meta property="og:url" content="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/dependent-data-selection-by-group-saleseq.html" />
-<meta property="og:description" content="Main Contributer for this blog: Maximilian Droschl Reason for us to switch dependent variable After evaluating several online sources for extracting monthly telephone sales data, including Capital IQ, Bloomberg and telephone company websites, our team realized that a standardized way of extracting the data was unrealistic. In order not to …" />
+<meta property="og:title" content="Data Cleaning and Analysis (by Group &#34;SalesEQ&#34;) "/>
+<meta property="og:url" content="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/data-cleaning-and-analysis-by-group-saleseq.html" />
+<meta property="og:description" content="Main Contributer for this blog: Ricky Choi (Data Cleaning), Zixian Fan (Data Analysis) Data Cleaning Data Cleaning is an important part in text preprocessing as it determines the quality of data and hence the performance of the model. The goal of text preprocessing is to remove redundant text that does …" />
 <meta property="og:site_name" content="FINA4350 Student Blog 2024" />
 <meta property="og:article:author" content="FINA4350 Students 2024" />
-<meta property="og:article:published_time" content="2024-04-23T22:00:00+08:00" />
-<meta name="twitter:title" content="Dependent Data Selection (by Group &#34;SalesEQ&#34;) ">
-<meta name="twitter:description" content="Main Contributer for this blog: Maximilian Droschl Reason for us to switch dependent variable After evaluating several online sources for extracting monthly telephone sales data, including Capital IQ, Bloomberg and telephone company websites, our team realized that a standardized way of extracting the data was unrealistic. In order not to …">
+<meta property="og:article:published_time" content="2024-04-21T16:00:00+08:00" />
+<meta name="twitter:title" content="Data Cleaning and Analysis (by Group &#34;SalesEQ&#34;) ">
+<meta name="twitter:description" content="Main Contributer for this blog: Ricky Choi (Data Cleaning), Zixian Fan (Data Analysis) Data Cleaning Data Cleaning is an important part in text preprocessing as it determines the quality of data and hence the performance of the model. The goal of text preprocessing is to remove redundant text that does …">
 
-        <title>Dependent Data Selection (by Group &#34;SalesEQ&#34;)  · FINA4350 Student Blog 2024
+        <title>Data Cleaning and Analysis (by Group &#34;SalesEQ&#34;)  · FINA4350 Student Blog 2024
 </title>
         <link href="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="FINA4350 Student Blog 2024 - Full Atom Feed" />
 
@@ -68,8 +68,8 @@
 <div class="row-fluid">
     <header class="page-header span10 offset2">
         <h1>
-            <a href="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/dependent-data-selection-by-group-saleseq.html">
-                Dependent Data Selection (by Group "SalesEQ")
+            <a href="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/data-cleaning-and-analysis-by-group-saleseq.html">
+                Data Cleaning and Analysis (by Group "SalesEQ")
             </a>
         </h1>
     </header>
@@ -78,18 +78,42 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <h3>Main Contributer for this blog: Maximilian Droschl</h3>
-<h2>Reason for us to switch dependent variable</h2>
-<p>After evaluating several online sources for extracting monthly telephone sales data, including Capital IQ, Bloomberg and telephone company websites, our team realized that a standardized way of extracting the data was unrealistic. In order not to risk using poor quality data as the basis for our time series model to make the final prediction, the team concluded that it would be best to change the dependent variable.</p>
-<h2>New dependent - Stock Price</h2>
-<p>To keep the focus on the American phone market, our new dependent variable will be the monthly return of a stock portfolio consisting of the five largest phone companies according to their market share within the American telecommunications market. According to Bloomberg, the companies with the largest market shares in the U.S. smartphone industry are Apple (68.23%), Samsung (25.20%), Motorola (3.90%), and Google (2.67%).</p>
-<p>But why focus on stocks rather than phone sales? Financial markets, particularly stock markets, offer valuable insights into the performance of the smartphone industry. They are considered the most efficient means of reflecting all available information, regardless of its form of efficiency (Fama, 1970). In contrast to other performance measures, such as sales figures, profits, or expenses, financial markets provide a more comprehensive view. Accurately forecasting industry performance or the performance of a particular company within the industry can inform strategies for one's own business. Additionally, since companies have access to their own sales numbers, forecasted asset returns can serve as an informative explanatory variable in models aimed at forecasting sales.</p>
-<p>However, Roberts (1967) demonstrated that there are various forms of efficiency that may lead to a pure approximation of future prices. This is because fundamental analysis relies on publicly available information and cannot generate excess returns. As the literature reports semi-strong form efficiency and occasional violations of it, we aim to provide more accurate forecasts by adding sentiment scores derived from our Sentiment-LDA model, in addition to publicly available information.</p>
-<h2>Conclusion</h2>
-<p>In conclusion, the final time series model (ARIMAX/LSTM) will be fitted to the subsequent dataset: Dependent Variable - Monthly returns of equity portfolio; Explanatory Variables - Lagged returns of equity portfolio, Moving Average term, Residual term, Exogenous variables, which comprise the series of sentiment scores from our Sentiment-LDA model and the Michigan Consumer Sentiment Index.</p>
-<h2>Reference</h2>
-<p>Fama, E. F. (1970). Efficient capital markets. Journal of finance, 25(2), 383-417.</p>
-<p>Roberts, H. (1967). Statistical versus clinical prediction of the stock market CRSP. University of Chicago, Chicago.</p>
+            <h3>Main Contributer for this blog: Ricky Choi (Data Cleaning), Zixian Fan (Data Analysis)</h3>
+<h2>Data Cleaning</h2>
+<p>Data Cleaning is an important part in text preprocessing as it determines the quality of data and hence the performance of the model. The goal of text preprocessing is to remove redundant text that does not help with explaining the sentiment of the articles, and to unify the formats of the texts. </p>
+<p>The first step of cleaning is to check for presence for abnormal data in the scraped csv file. From my personal experience, abnormal data may be some meaningless data with very little word count. Therefore, we checked for any news articles with word count below 20 words, and fortunately no abnormal data was discovered in the csv file. </p>
+<p>Next, we converted all texts to lowercases, followed by removal of redundant data such as stop words, special characters, numbers, and synonyms. Then we performed lemmatization to reduce words into their root form. Details will be covered in the report.</p>
+<p>There are a few limitations we encountered during data cleaning. First, spelling mistakes cannot be eliminated. There are no patterns for spelling mistakes, and it is not impossible to do eyeball check on all words and correct them. Given the sources of text are mainly reputable newspapers such as the New York Times and the Washington Post, error due to spelling mistakes can be neglected. Second, the original meaning of some words may be lost after transformation. For instance, “U.S.” becomes “us” after lowercasing and removal of punctuation. It may be misrecognized as the pronoun “us” instead of a country. We believe this problem does not occur frequently and hence it can be neglected. </p>
+<h2>Data Analysis</h2>
+<p>After obtaining the cleaned news data, we started to perform some necessary analyses on the data in order to better go about applying subsequent machine learning models. We divided it into two parts: rudimentary analysis and text analysis.</p>
+<h3>Rudimentary analysis</h3>
+<p>Firstly, we have the general understanding of the dataset with:</p>
+<p>Total line of text: 12568.</p>
+<p>Monthly period number: 132.</p>
+<p>And, we can have a quick look of our dataframe:</p>
+<p><img alt="Input Code" src="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/images/SalesEQ_03_img-1.png"></p>
+<p>From the figure, we can see that the data frame mainly consists of these five columns, where Cycle Month indicates which month of the year the article belongs to, because the model we are going to apply subsequently is learning for monthly data, which is equivalent to adjusting the frequency of the data. Headline is the headline of these news, and Text represents the news contents.</p>
+<p>After that, we went to analyze how much news we were able to retain each month, as shown below:</p>
+<p><img alt="Input Code" src="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/images/SalesEQ_03_img-2.jpg"></p>
+<p>Since we are capped at 100 news articles per acquisition, that number of news articles will be available in the beginning years. However, the number of relevant news obtained has declined in recent times, probably because the market's attention was not primarily on mobile phones during this period. However, since the number of news articles is roughly higher than 50, it does not unduly affect our final results.</p>
+<p>In the meantime, we briefly analyzed the source of the text data and found that it mainly came from Reuters News and Wall Street Journal. Perhaps in the future, those who follow mobile news could check these two data sources more often.</p>
+<p><img alt="Input Code" src="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/images/SalesEQ_03_img-3.jpg"></p>
+<h3>Text Analysis</h3>
+<p>Afterwards we would like to perform some simple analyses of the obtained text in order to better understand the data. We are going to do the analysis based on the following two pieces of code:</p>
+<p><img src="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/images/SalesEQ_03_img-4.png" alt="Input Code" width="400" height="100"></p>
+<p><img src="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/images/SalesEQ_03_img-5.png" alt="Input Code" width="400" height="100"></p>
+<p>These codes get the five most frequent words for each month. Inevitably, however, the main words are a lot of useless connectives and articles</p>
+<p><img alt="Input Code" src="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/images/SalesEQ_03_img-6.png"></p>
+<p>So we introduce nltk's stopwords to sift out these useless words. Stopwords are words similar to: {'a','about','above','after','again','against','ain','all','am','an','and','any','are','aren',"aren't",'as','at','be','because','been','before','being','below','between','both'} </p>
+<p>We further merge the data as well as make statistics to get the following dataframe. For example, in January 2012, the most important words in the headline were update, apple, loss, profit and sales, etc.</p>
+<p><img src="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/images/SalesEQ_03_img-7.png" alt="Input Code" width="400" height="350"></p>
+<p>Finally, we construct Word Cloud and Word Co-occurrence Network Graphs to make some more intuitive interpretations. Word Cloud shows which words appear most frequently in all text, and the higher the frequency the larger the word. We can see that words like Microsoft, profit, said, Lenovo are the most important words in mobile phone related news.</p>
+<p><img src="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/images/SalesEQ_03_img-8.jpg" alt="Input Code" width="500" height="450"></p>
+<p>The Word Co-occurrence Network Graphs shows the co-occurrence relationships between words in text data. In this graph, each node represents a word, and the edges indicate how often these words occur in the same text. The positions of the nodes are determined based on a network analysis algorithm, and their positions usually reflect the relationships between the nodes. Nodes that are closer together indicate that they co-occur more frequently in the text. And the size of the nodes can be adjusted according to the frequency of occurrence of the words, and words that occur more frequently are usually shown as larger nodes. The number of edges indicates the number of occurrences between two words, and the thickness of edges is usually proportional to the frequency of occurrences.
+From there, we can see in the chart below that words like company, apple, china, and samsung are the most frequent words that appear alongside other words. The occurrence of pandemic, trump, and russia at the edges also gives us a sideways view of the significant times in which these words appear.</p>
+<p><img alt="Input Code" src="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/images/SalesEQ_03_img-9.jpg"></p>
+<h2>Final Remark</h2>
+<p>From the Data Cleaning and Data Analysis sections above, we gained a better understanding of our textual data, which prepared us for the subsequent work of understanding text and thinking about how to transform it to ask quantifiable variables.</p>
 
 
              
@@ -108,7 +132,7 @@
         </div>
         <section id="article-sidebar" class="span2">
             <h4>Published</h4>
-            <time itemprop="dateCreated" datetime="2024-04-23T22:00:00+08:00">Tue 23 April 2024</time>
+            <time itemprop="dateCreated" datetime="2024-04-21T16:00:00+08:00">Sun 21 April 2024</time>
             <h4>Category</h4>
             <a class="category-link" href="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/categories.html#progress-report-ref">Progress Report</a>
             <h4>Tags</h4>
