@@ -17,16 +17,16 @@
 
 <meta name="keywords" content="Group SalesEQ, Progress Report, " />
 
-<meta property="og:title" content="Data Web Scraping (by Group &#34;SalesEQ&#34;) "/>
-<meta property="og:url" content="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/data-web-scraping-by-group-saleseq.html" />
-<meta property="og:description" content="Main Contributer for this blog: Jason Li Web Scraping Review Based on a little web scraping experience in the past in other courses and projects, we believe web scraping is a bit like a data exploration task, which is to locate patterns in the tags of the information we need …" />
+<meta property="og:title" content="Dependent Data Selection (by Group &#34;SalesEQ&#34;) "/>
+<meta property="og:url" content="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/dependent-data-selection-by-group-saleseq.html" />
+<meta property="og:description" content="Main Contributer for this blog: Maximilian Droschl Reason for us to switch dependent variable After evaluating several online sources for extracting monthly telephone sales data, including Capital IQ, Bloomberg and telephone company websites, our team realized that a standardized way of extracting the data was unrealistic. In order not to …" />
 <meta property="og:site_name" content="FINA4350 Student Blog 2024" />
 <meta property="og:article:author" content="FINA4350 Students 2024" />
-<meta property="og:article:published_time" content="2024-04-17T22:00:00+08:00" />
-<meta name="twitter:title" content="Data Web Scraping (by Group &#34;SalesEQ&#34;) ">
-<meta name="twitter:description" content="Main Contributer for this blog: Jason Li Web Scraping Review Based on a little web scraping experience in the past in other courses and projects, we believe web scraping is a bit like a data exploration task, which is to locate patterns in the tags of the information we need …">
+<meta property="og:article:published_time" content="2024-04-23T22:00:00+08:00" />
+<meta name="twitter:title" content="Dependent Data Selection (by Group &#34;SalesEQ&#34;) ">
+<meta name="twitter:description" content="Main Contributer for this blog: Maximilian Droschl Reason for us to switch dependent variable After evaluating several online sources for extracting monthly telephone sales data, including Capital IQ, Bloomberg and telephone company websites, our team realized that a standardized way of extracting the data was unrealistic. In order not to …">
 
-        <title>Data Web Scraping (by Group &#34;SalesEQ&#34;)  · FINA4350 Student Blog 2024
+        <title>Dependent Data Selection (by Group &#34;SalesEQ&#34;)  · FINA4350 Student Blog 2024
 </title>
         <link href="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="FINA4350 Student Blog 2024 - Full Atom Feed" />
 
@@ -68,8 +68,8 @@
 <div class="row-fluid">
     <header class="page-header span10 offset2">
         <h1>
-            <a href="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/data-web-scraping-by-group-saleseq.html">
-                Data Web Scraping (by Group "SalesEQ")
+            <a href="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/dependent-data-selection-by-group-saleseq.html">
+                Dependent Data Selection (by Group "SalesEQ")
             </a>
         </h1>
     </header>
@@ -78,42 +78,18 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <h3>Main Contributer for this blog: Jason Li</h3>
-<h2>Web Scraping Review</h2>
-<p>Based on a little web scraping experience in the past in other courses and projects, we believe web scraping is a bit like a data exploration task, which is to locate patterns in the tags of the information we need and try to put everything into a loop. For this time, we still need to locate such patterns, with a lot more other factors/issues to be considered.</p>
-<p>Compared to our previous experience in web scraping, web scraping on Factiva is a much less static task. For starters, we can not directly access the Factiva platform with a hyperlink, otherwise we would be redirected to a login page which we do not have the credentials to login. Thus, we have to start from the HKU library page step-by-step, login through the library page with our HKU library credentials to finally enter the familiar query page.</p>
-<p><img alt="Input Code" src="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/images/SalesEQ_02_img-1.png"></p>
-<p><img src="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/images/SalesEQ_02_img-2.png" alt="Input Code" width="300" height="200"></p>
-<h2>Enter the Page</h2>
-<p>Upon entering this page, there are plenty of options to be toggled or adjusted to query the relevant articles that we would like, which took us quite a while as there are various types of actions to be done:</p>
-<p><img alt="Input Code" src="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/images/SalesEQ_02_img-3.png"></p>
-<ol>
-<li>⁠Free Text Input</li>
-</ol>
-<p><img alt="Input Code" src="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/images/SalesEQ_02_img-4.png">
-<img alt="Input Code" src="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/images/SalesEQ_02_img-5.png"></p>
-<ol>
-<li>Dropdown menu selection</li>
-</ol>
-<p><img alt="Input Code" src="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/images/SalesEQ_02_img-6.png"></p>
-<p><img alt="Input Code" src="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/images/SalesEQ_02_img-7.png"></p>
-<ol>
-<li>Search and select</li>
-</ol>
-<p><img alt="Input Code" src="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/images/SalesEQ_02_img-8.png"></p>
-<h2>Small Bugs to pay attention to</h2>
-<h3>1</h3>
-<p>There are plenty of hiccups throughout the process of interacting with this query page. Sometimes the pages took too long to load, causing timeout exceptions and sometimes we accidentally intervened with my mouse and the search bar does not return an option for us to select. On very rare occasions, the page is not properly loaded and is displayed in a html format or the html tags mysteriously change slightly to throw us a curveball. Considering we would like to scrape articles from each month across 10 years, this process has to be repeated 120 times and the myriad of errors has been rather frustrating. However, this is part of web scraping, trial-and-error to ensure the robustness of the code.</p>
-<p><img alt="Input Code" src="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/images/SalesEQ_02_img-9.png"></p>
-<h3>2</h3>
-<p>The search result page is rather standard with a clear ‘row-by-row’ structure. Considering the limitations of the HKU license, it would be preferred to not use automation software to download these articles directly. To work around this, the program clicks into these articles one by one and scrapes the headlines and the bodies of these articles, then goes back to the previous search result page. However, these articles come in different structures and formats, with different numbers of paragraphs, and sometimes with photos or tables in between. Unfortunately, we have attempted different methods to no avail, which can only leave the task of cleaning these texts to the preprocessing afterwards.</p>
-<p><img alt="Input Code" src="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/images/SalesEQ_02_img-10.png"></p>
-<h3>3</h3>
-<p>Looping through these articles presents some issues as well. For instance, the server would return a gateway error, which is rare but rather unfixable. On the other hand, it is quite common that during the process of going back to the search result page, the page would somehow go all the way back to the query page. The tricky part is that the query is partially deleted i.e. data sources reset and the html tags would differ slightly, which takes extra effort to handle and not disrupt the scraping. Eventually, the run took about 8-9 hours to complete.</p>
-<p><img alt="Input Code" src="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/images/SalesEQ_02_img-11.png"></p>
-<p><img alt="Input Code" src="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/images/SalesEQ_02_img-12.png"></p>
-<h2>Final remark from the main contributor of this part</h2>
-<p>After completing the task, we find web scraping a rather unglamorous, slightly frustrating but rewarding experience, more so compared to my previous encounters with web scraping. In reports or presentations, data collection is often briefly skimmed through, but is certainly a crucial part of any project.</p>
+            <h3>Main Contributer for this blog: Maximilian Droschl</h3>
+<h2>Reason for us to switch dependent variable</h2>
+<p>After evaluating several online sources for extracting monthly telephone sales data, including Capital IQ, Bloomberg and telephone company websites, our team realized that a standardized way of extracting the data was unrealistic. In order not to risk using poor quality data as the basis for our time series model to make the final prediction, the team concluded that it would be best to change the dependent variable.</p>
+<h2>New dependent - Stock Price</h2>
+<p>To keep the focus on the American phone market, our new dependent variable will be the monthly return of a stock portfolio consisting of the five largest phone companies according to their market share within the American telecommunications market. According to Bloomberg, the companies with the largest market shares in the U.S. smartphone industry are Apple (68.23%), Samsung (25.20%), Motorola (3.90%), and Google (2.67%).</p>
+<p>But why focus on stocks rather than phone sales? Financial markets, particularly stock markets, offer valuable insights into the performance of the smartphone industry. They are considered the most efficient means of reflecting all available information, regardless of its form of efficiency (Fama, 1970). In contrast to other performance measures, such as sales figures, profits, or expenses, financial markets provide a more comprehensive view. Accurately forecasting industry performance or the performance of a particular company within the industry can inform strategies for one's own business. Additionally, since companies have access to their own sales numbers, forecasted asset returns can serve as an informative explanatory variable in models aimed at forecasting sales.</p>
+<p>However, Roberts (1967) demonstrated that there are various forms of efficiency that may lead to a pure approximation of future prices. This is because fundamental analysis relies on publicly available information and cannot generate excess returns. As the literature reports semi-strong form efficiency and occasional violations of it, we aim to provide more accurate forecasts by adding sentiment scores derived from our Sentiment-LDA model, in addition to publicly available information.</p>
+<h2>Conclusion</h2>
+<p>In conclusion, the final time series model (ARIMAX/LSTM) will be fitted to the subsequent dataset: Dependent Variable - Monthly returns of equity portfolio; Explanatory Variables - Lagged returns of equity portfolio, Moving Average term, Residual term, Exogenous variables, which comprise the series of sentiment scores from our Sentiment-LDA model and the Michigan Consumer Sentiment Index.</p>
+<h2>Reference</h2>
+<p>Fama, E. F. (1970). Efficient capital markets. Journal of finance, 25(2), 383-417.</p>
+<p>Roberts, H. (1967). Statistical versus clinical prediction of the stock market CRSP. University of Chicago, Chicago.</p>
 
 
              
@@ -132,7 +108,7 @@
         </div>
         <section id="article-sidebar" class="span2">
             <h4>Published</h4>
-            <time itemprop="dateCreated" datetime="2024-04-17T22:00:00+08:00">Wed 17 April 2024</time>
+            <time itemprop="dateCreated" datetime="2024-04-23T22:00:00+08:00">Tue 23 April 2024</time>
             <h4>Category</h4>
             <a class="category-link" href="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/categories.html#progress-report-ref">Progress Report</a>
             <h4>Tags</h4>
