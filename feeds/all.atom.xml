@@ -133,7 +133,286 @@ However, for values where the date posted was “2 weeks ago”, &lt;code&gt;now
    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;cleaned_text&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lower&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Yet, we still faced some limitations of the outcome and one example is that 'U.S.' was converted to 'us' when we removed the punctuations. This could completely change the meaning of the word and hence, limit the reliability of our results in subsequent stages of sentiment analysis. We also acknowledged some other limitations in our outcomes in further steps of text preprocessing. For instance, when we attempted stemming, we realized that stemming is not always perfect and can remove word components, leaving behind stems that are grammatically incorrect. Overall, our attempts in text preprocessing have taught us about the complexities involved in preparing for language analysis and how difficult it is to clean the text data perfectly, especially when dealing with a substantial volume of text data that cannot be manually cleaned individually. We also learned the importance of finding a balance between completeness and practicality in text preprocessing. While it is important to aim for the best possible data cleaning, we should also consider the feasibility and efficiency of the data cleaning methods being used. &lt;/p&gt;</content><category term="Progress Report"></category><category term="Group ESG &amp; Volatility"></category></entry><entry><title>Review &amp; Reflection Part 2 - ESG News and Stock Volatility (by Group "ESG &amp; Volatility")</title><link href="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/review-reflection-part-2-esg-news-and-stock-volatility-by-group-esg-volatility.html" rel="alternate"></link><published>2024-04-29T22:07:00+08:00</published><updated>2024-04-29T22:07:00+08:00</updated><author><name>Group ESG &amp; Volatility</name></author><id>tag:buehlmaier.github.io,2024-04-29:/FINA4350-student-blog-2024-01/review-reflection-part-2-esg-news-and-stock-volatility-by-group-esg-volatility.html</id><summary type="html">&lt;p&gt;For this blog post, we will provide a cumulative review and reflection on our project, 'ESG &amp;amp; Volatility,' specifically on the Sentiment Analysis and Stock Volatility portion of our project. &lt;/p&gt;
+&lt;p&gt;Yet, we still faced some limitations of the outcome and one example is that 'U.S.' was converted to 'us' when we removed the punctuations. This could completely change the meaning of the word and hence, limit the reliability of our results in subsequent stages of sentiment analysis. We also acknowledged some other limitations in our outcomes in further steps of text preprocessing. For instance, when we attempted stemming, we realized that stemming is not always perfect and can remove word components, leaving behind stems that are grammatically incorrect. Overall, our attempts in text preprocessing have taught us about the complexities involved in preparing for language analysis and how difficult it is to clean the text data perfectly, especially when dealing with a substantial volume of text data that cannot be manually cleaned individually. We also learned the importance of finding a balance between completeness and practicality in text preprocessing. While it is important to aim for the best possible data cleaning, we should also consider the feasibility and efficiency of the data cleaning methods being used. &lt;/p&gt;</content><category term="Progress Report"></category><category term="Group ESG &amp; Volatility"></category></entry><entry><title>ESG Risk Levels and Score Prediction Using LLM (By "TheWay")</title><link href="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/esg-risk-levels-and-score-prediction-using-llm-by-theway.html" rel="alternate"></link><published>2024-04-30T14:00:00+08:00</published><updated>2024-04-30T14:00:00+08:00</updated><author><name>FINA4350 Students 2024</name></author><id>tag:buehlmaier.github.io,2024-04-30:/FINA4350-student-blog-2024-01/esg-risk-levels-and-score-prediction-using-llm-by-theway.html</id><summary type="html">&lt;p&gt;&lt;em&gt;Author: Chau Cheuk Him, Hung Man Kay, Sean Michael Suntoso, Tai Ho Chiu Hero, Wong Ngo Yin&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;In today's rapidly evolving investment landscape, Environmental, Social, and Governance (ESG) factors have gained significant recognition as key drivers of long-term value creation. According to Bloomberg Intelligence, a staggering 85% of investors agree …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;em&gt;Author: Chau Cheuk Him, Hung Man Kay, Sean Michael Suntoso, Tai Ho Chiu Hero, Wong Ngo Yin&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;In today's rapidly evolving investment landscape, Environmental, Social, and Governance (ESG) factors have gained significant recognition as key drivers of long-term value creation. According to Bloomberg Intelligence, a staggering 85% of investors agree that incorporating ESG considerations can lead to superior returns, bolster portfolio resilience, and enhance fundamental analysis. Projections indicate that by 2030, ESG investing is expected to account for a substantial portion, approximately US$40 trillion or 25%, of the total projected assets under management worldwide. Recognising the significance of ESG in investment decision-making, we have embarked upon the development of an ESG risk levels predictor, aimed at assisting investors in making informed and responsible investment choices.&lt;/p&gt;
+&lt;h2&gt;1. Background Information&lt;/h2&gt;
+&lt;h3&gt;1.1. What are ESG scores and ESG risk levels?&lt;/h3&gt;
+&lt;p&gt;ESG scores and ESG risk levels are two distinct measures used to assess environmental, social, and governance (ESG) factors. ESG scores provide a comprehensive evaluation of a company's overall sustainability and responsible business practices, considering a wide range of ESG criteria. These scores reflect the company's commitment to sustainability and its ability to manage ESG risks and opportunities effectively. On the other hand, ESG risk levels focus specifically on quantifying the potential risks associated with a company's ESG practices, assessing factors such as carbon emissions, labor practices, and regulatory compliance. There are 5 ESG risk levels: “Negligible”, “Low”, “Medium”, “High” and “Severe”, which provide investors with an assessment of the potential downside risks. Due to this different objective, ESG score is not always correlate with ESG Risk Level. &lt;/p&gt;
+&lt;h3&gt;1.2. The Significance of ESG Scores and ESG Risk Levels&lt;/h3&gt;
+&lt;p&gt;Fund managers seeking to align their investment strategies with ESG principles often rely on ESG scores and risk level to identify potential investments for inclusion in ESG-focused exchange-traded funds (ETFs) and other sustainable investment products. Our ESG scores and risk levels predictor aims to leverage advanced data analytics and machine learning techniques to predict and generate accurate ESG scores and risk level for companies, empowering investors with valuable information for their investment decision-making processes.&lt;/p&gt;
+&lt;h3&gt;1.3. Benefits of ESG Risk Levels and ESG Score Predictor&lt;/h3&gt;
+&lt;p&gt;ESG risk levels and score predictors hold significant potential to revolutionise the investment landscape by providing investors with a reliable tool to evaluate the sustainability performance of companies. By harnessing the power of data analytics and machine learning algorithms, our predictor offers the following benefits:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Enhanced Investment Decision-Making: Investors can make more informed choices by incorporating ESG scores into their investment analysis. Our predictor enables investors to identify socially responsible companies with strong sustainability practices, aligning their investments with their values.&lt;/li&gt;
+&lt;li&gt;Risk Mitigation: By evaluating a company's environmental and social practices, investors can identify potential risks, such as regulatory non-compliance or reputational damage. Our predictor assists in identifying companies with robust governance frameworks, thereby reducing investment risks.&lt;/li&gt;
+&lt;li&gt;Sustainable Impact: Through the promotion of ESG investing, our predictor contributes to the broader goal of driving positive change in corporate behaviour. By rewarding companies with strong ESG practices, investors can incentivise sustainable practices and foster a more responsible business environment.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Therefore, we decided to develop models to predict ESG Risk Levels and ESG Score as our project.&lt;/p&gt;
+&lt;h2&gt;2. Data Gathering and Pre-processing&lt;/h2&gt;
+&lt;p&gt;We gather data from two different source. &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://www.kaggle.com/code/mauriciovellasquez/esg-risk-analysis-insights-from-s-p-500-companies"&gt;Table consist of ESG Risk Level and Score&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.kaggle.com/datasets/tpotterer/motley-fool-scraped-earnings-call-transcripts"&gt;Table consist of Earnings Call Transcript&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Firstly, we proceed by merging the data based on the Ticker and removing any rows that contain invalid or empty data before 2022. Subsequently, we eliminate the Q&amp;amp;A section from the transcript to reduce its length. In order to further condense the transcript for analysis purposes, we employ ESG-BERT to classify sections that are relevant to environmental, social, and governance (ESG) topics. This process results in an average word count reduction from 3012 to 1298. Additionally, we employ stop-word removal and lemmatization techniques before splitting the data into test and train sets.&lt;/p&gt;
+&lt;p&gt;Upon examining the ESG score chart, we observe a left-skewed distribution, indicating that a larger number of companies possess lower ESG scores.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Data Distribution" src="images/TheWay_02_Img01_TestTrainDataDist.png" title="Data Distribution"&gt;&lt;/p&gt;
+&lt;p&gt;This data imbalance can introduce bias towards the majority class in our model. To address this concern, we employ class weighting techniques during the model development phase to mitigate the impact of this imbalance.&lt;/p&gt;
+&lt;h2&gt;3. Development with Different Base Model&lt;/h2&gt;
+&lt;h3&gt;3.1. ESG-Bert Fine-tuning&lt;/h3&gt;
+&lt;h4&gt;3.1.1. Motivation&lt;/h4&gt;
+&lt;p&gt;In this project, we actually focused on the BERT model for predicting ESG scores and risk levels.&lt;/p&gt;
+&lt;p&gt;One of the main advantages of using BERT is its relatively lower computational resource requirements compared to other well-known powerful models like ChatGPT and Llama. BERT's lightweight nature allows us to achieve optimal performance even with medium-range GPUs. In contrast, getting the full potential of ChatGPT or Llama would require significantly more resources, which is not feasible for us. This accessibility and efficient use of limited resources make BERT a more practical choice for us.&lt;/p&gt;
+&lt;p&gt;Besides, BERT's architecture is particularly well-suited for classification tasks, such as predicting ESG risk levels. It allows for straightforward application to classification problems, like predicting ESG risk levels in this project. In contrast, generative models like ChatGPT and Llama, despite their impressive capabilities, can be less intuitive for classification tasks due to their autoregressive nature.&lt;/p&gt;
+&lt;p&gt;Another reason to choose BERT is its proven effectiveness in a variety of NLP tasks. As an older model compared to Llama or ChatGPT (BERT was published in 2018), BERT has been widely adopted and successfully applied across numerous research projects, giving us confidence in its ability to deliver strong results for ESG prediction tasks.&lt;/p&gt;
+&lt;p&gt;Furthermore, there are already fine-tuned models specifically designed for ESG-related tasks. These models demonstrate the potential of BERT for addressing the unique challenges associated with predicting ESG scores and risk levels.&lt;/p&gt;
+&lt;p&gt;ESG-Bert is one of the fine-tuned model available online. It is a &lt;strong&gt;Classification&lt;/strong&gt; Natural Language Processing model fine-tuned for dealing with ESG-related data &lt;strong&gt;classification&lt;/strong&gt; tasks. We are trying to fine-tune this model with our dataset for predicting the ESG scores and ESG risk level. We believe this approach would yield the best results.&lt;/p&gt;
+&lt;h4&gt;3.1.2. Work Done&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;BertForSequenceClassification&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;from_pretrained&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;nbroad/ESG-BERT&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;num_labels&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;num_classes&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ignore_mismatched_sizes&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;classifier&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;torch&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;nn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Linear&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hidden_size&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;num_classes&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;We load the pre-trained ESG-Bert model and set its classifier as above for classifying the ESG risk level. On the other hand, if we would like to predict ESG scores, we have to replace the classification head with a linear layer to a continuous value.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;BertForSequenceClassification&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;from_pretrained&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;nbroad/ESG-BERT&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# For regression, we need to remove the classification head that outputs logits for classes&lt;/span&gt;
+&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;classifier&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;torch&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;nn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Linear&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hidden_size&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;We then proceed to fine-tune. As mentioned, we have to deal with the data imbalance case.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;num_classes&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;label_encoder&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;classes_&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;class_weights&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;torch&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tensor&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;train&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;esg_risk_level&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;value_counts&lt;/span&gt;&lt;span class="p"&gt;()[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;iin&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num_classes&lt;/span&gt;&lt;span class="p"&gt;)],&lt;/span&gt; &lt;span class="n"&gt;dtype&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;torch&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;float&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="c1"&gt;# Explicitly define as floatclass_weights= class_weights/ class_weights.sum()* num_classes&lt;/span&gt;
+&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;BertForSequenceClassification&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;from_pretrained&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;nbroad/ESG-BERT&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;num_labels&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;num_classes&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ignore_mismatched_sizes&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;classifier&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;torch&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;nn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Linear&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hidden_size&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;num_classes&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;optimizer&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;AdamW&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;parameters&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;lr&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;5e-5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;criterion&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;torch&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;nn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;CrossEntropyLoss&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;weight&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;class_weights&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;torch&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;device&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;cpu&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;&lt;span class="c1"&gt;# Ensure weights are on the correct device and float&lt;/span&gt;
+
+&lt;span class="n"&gt;train_loader&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;DataLoader&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;train_dataset&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;batch_size&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;16&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;shuffle&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;device&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;torch&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;device&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;cpu&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# Use &amp;quot;cuda&amp;quot; if you have GPU&lt;/span&gt;
+&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;device&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Training Loop&lt;/span&gt;
+&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;train&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;epoch&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;batch&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;tqdm&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;train_loader&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;desc&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Training Epoch &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;epoch&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;optimizer&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zero_grad&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+        &lt;span class="n"&gt;input_ids&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;batch&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;input_ids&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;device&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;attention_mask&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;batch&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;attention_mask&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;device&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;labels&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;batch&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;labels&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;device&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+        &lt;span class="n"&gt;outputs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;input_ids&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;attention_mask&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;attention_mask&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;loss&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;criterion&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;outputs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;logits&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;float&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;labels&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# Ensure logits are FloatTensor&lt;/span&gt;
+
+        &lt;span class="n"&gt;loss&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;backward&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="n"&gt;optimizer&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;step&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4&gt;3.1.3. Model Setup With Class Weights to Handle Imbalance Data&lt;/h4&gt;
+&lt;p&gt;To handle the imbalance, we calculated class weights for each ESG risk level. This approach helps the model treat each risk level fairly during the training process by giving more importance to less frequent classes. Essentially, we're telling the model that it's just as crucial to learn from the rarer ESG risk levels as it is from the more common ones.&lt;/p&gt;
+&lt;p&gt;Another important aspect of our approach is the choice of the CrossEntropyLoss function. This loss function is specifically designed for multi-class classification problems, making it a suitable choice for predicting ESG risk levels. By incorporating class weights into the loss function, we further ensure that the model gives equal attention to all ESG risk levels during training, leading to a more accurate and well-rounded prediction capability.&lt;/p&gt;
+&lt;h4&gt;3.1.4. Findings&lt;/h4&gt;
+&lt;p&gt;Below is the performance of the fine-tuned ESG-Bert model. We also try the performance of the vanilla ESG-Bert model (without any fine-tuning) on our dataset to set a benchmark.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;ESG risk level prediction accuracy&lt;/th&gt;
+&lt;th&gt;Vanilla ESG-Bert&lt;/th&gt;
+&lt;th&gt;Fine-tuned ESG-Bert&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Training data&lt;/td&gt;
+&lt;td&gt;27.8%&lt;/td&gt;
+&lt;td&gt;51.4%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Testing data&lt;/td&gt;
+&lt;td&gt;21.7%&lt;/td&gt;
+&lt;td&gt;46.4%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;ESG score prediction on testing data&lt;/th&gt;
+&lt;th&gt;Vanilla ESG-Bert&lt;/th&gt;
+&lt;th&gt;Fine-tuned ESG-Bert&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;MSE (Mean Squared Error)&lt;/td&gt;
+&lt;td&gt;452.555&lt;/td&gt;
+&lt;td&gt;62.933&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;MAE (Mean Absolute Error)&lt;/td&gt;
+&lt;td&gt;20.134&lt;/td&gt;
+&lt;td&gt;20.134&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;We see an obvious improvement after fine-tuning, but the performance is a bit below our expectations. Despite the current accuracy not being exceptionally high, we believe the fine-tuned ESG-BERT model still holds a certain level of usefulness. The improvements over the vanilla model indicate that it has learned to adapt to our specific dataset and task. As we continue to refine our approach, with BERT or ESG-Bert, we expect the model's performance to improve, making it a valuable tool for predicting ESG risk levels and scores in the future.&lt;/p&gt;
+&lt;h3&gt;3.2. Llama-2 Fine-tuning&lt;/h3&gt;
+&lt;h4&gt;3.2.1. Motivation&lt;/h4&gt;
+&lt;p&gt;Llama2 is a collection of pre-trained and fine-tuned large language models developed by Meta AI and released in 2023. These models are freely available for both research and commercial use. Llama2 AI models possess the ability to perform diverse natural language processing tasks, ranging from text generation to programming code analysis.  &lt;strong&gt;Llama2 is one of the strong LLM models, has been in used for fine-tuning for a while and is widely acknowledged to be even more powerful than BERT in general.&lt;/strong&gt; Therefore, we believe that utilising this model will yield significant results and valuable comparisons. As such, it is worthwhile to provide a more detailed account of our methods and the work we have undertaken.&lt;/p&gt;
+&lt;p&gt;We decided to use &lt;em&gt;Llama-2-7b-chat-hf&lt;/em&gt;, the Llama-2 model with 7 billion parameters from HuggingFace for fine-tuning. There are versions with 13b and 70b parameters, which are much more powerful. However, since we have limited resources (GPU), we have to use this smaller model to try and compute everything in a reasonable runtime.&lt;/p&gt;
+&lt;h4&gt;3.2.2. Work Done&lt;/h4&gt;
+&lt;p&gt;To access the Llama-2 model, we have to do the following:&lt;/p&gt;
+&lt;p&gt;First, visit https://llama.meta.com/llama-downloads/ and request access to Meta Llama with our email address. After receiving the permission email, log in to Hugging Face account on the Llama-2 model page at https://huggingface.co/meta-llama/Llama-2-7b-chat-hf, and request access to the model repository.&lt;/p&gt;
+&lt;p&gt;Once gained access to the model repository, set up the development environment by installing the Hugging Face Hub library. Run &lt;code&gt;pip install huggingface-hub&lt;/code&gt; in the environment and authenticate the registered account by running &lt;code&gt;huggingface-cli login&lt;/code&gt;. This will your account and grant you access to the Llama-2 model.&lt;/p&gt;
+&lt;p&gt;With these steps completed, we can finally access the model with this line of code:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;base_model&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;meta-llama/Llama-2-7b-chat-hf&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;We fine-tuned the Llama-2 model by the following approach:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;combine_question_answer&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;transcript_esg&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;esg_risk_level&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;system_msg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;lt;&amp;lt;SYS&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; \
+        &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;You are an rating agency. Your task is to predict the a company&amp;#39;s ESG Risk Level from a meeting transcript.&amp;quot;&lt;/span&gt; \
+        &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;You should evaluate the company&amp;#39;s performance on Environmental, Social and Governance issues.&amp;quot;&lt;/span&gt; \
+        &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;The possible Risk Levels, from low to high, are `Negligible`, `Low`, `Medium`, `High`, `Severe`.&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; \
+        &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;lt;&amp;lt;/SYS&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class="se"&gt;\n\n&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+    &lt;span class="n"&gt;prompt&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;lt;s&amp;gt;[INST] &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;system_msg&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;###Transcript: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;transcript_esg&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;###Risk Level: [/INST] `&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;esg_risk_level&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;`&amp;lt;/s&amp;gt;&amp;quot;&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;prompt&lt;/span&gt;
+
+&lt;span class="n"&gt;df_train&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;text&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df_train&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;apply&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;combine_question_answer&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;transcript_esg&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;esg_risk_level&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;axis&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The purpose of creating this prompt is to make it super easy for our model to understand its mission. It's like giving it a treasure map and a set of instructions to follow.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;combine_question_answer&lt;/code&gt; function is like a magical spell that mixes three essential ingredients:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;System message&lt;/strong&gt;: A friendly note that tells our model what it's supposed to do. It's like saying, "Hey buddy, you're a rating agency, and you need to figure out a company's ESG Risk Level from this meeting transcript. Oh, and here are the possible Risk Levels you can choose from!"&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Transcript&lt;/strong&gt;: This is the treasure map! It's the meeting transcript that our language model have to use to complete its mission.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Risk Level&lt;/strong&gt;: This is the final destination, the X on the treasure map. It's where our model should place the predicted ESG Risk Level.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;By creating this fun and structured prompt, we're helping our language model learn more effectively and become a pro at predicting ESG Risk Levels from meeting transcripts. &lt;/p&gt;
+&lt;p&gt;We then utilised the QLoRA (Quantised Low Rank Adaptation) method for fine-tuning our model. This approach is a type of PEFT (Parameter Efficient Fine Tuning) technique, which focuses on minimising the number of trainable parameters within a neural network. By optimising memory usage, QLoRA significantly reduces the time required for training. This time-saving advantage enables us to advance our project efficiently, even under tight time constraints.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;peft_params&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;LoraConfig&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;lora_alpha&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;16&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;lora_dropout&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;64&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;bias&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;none&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;task_type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;CAUSAL_LM&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;By fine-tuning the Llama-2 model in this manner, we can effectively compare its performance with that of our main project focus, the ESG-BERT model, to determine the more accurate and efficient solution for assessing ESG risk levels.&lt;/p&gt;
+&lt;h4&gt;3.2.3. Findings&lt;/h4&gt;
+&lt;p&gt;The training and testing accuracies achieved by the fine-tuned Llama-2 model stand at 40.3% and 29.5%, respectively. The ESG-BERT model has demonstrated superior performance with an exact same dataset. This is likely because we are using the "weakest" Llama-2 model, with the least number of parameters, due to our limited computational resources. This constraint creates a bottleneck, preventing us from further improving the model's performance. &lt;strong&gt;As a result, we decided not to proceed with ESG score prediction and stopped at this point.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3&gt;3.3. BERT Fine-tuning&lt;/h3&gt;
+&lt;h4&gt;3.3.1. Motivation&lt;/h4&gt;
+&lt;p&gt;Since the performance of ESG-BERT is not yet optimal, and we believe that BERT models have the potential to yield good results, we have also decided to directly utilise BERT and fine-tune it for this project. &lt;/p&gt;
+&lt;h4&gt;3.3.2. Work done&lt;/h4&gt;
+&lt;p&gt;Here are the codes and parameters that we use.  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;BASE_MODEL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;google-bert/bert-base-uncased&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;LEARNING_RATE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;1e-4&lt;/span&gt;
+&lt;span class="n"&gt;MAX_LENGTH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;512&lt;/span&gt;
+&lt;span class="n"&gt;BATCH_SIZE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;12&lt;/span&gt;
+&lt;span class="n"&gt;EPOCHS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;32&lt;/span&gt;
+
+&lt;span class="n"&gt;tokenizer&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;AutoTokenizer&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;from_pretrained&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BASE_MODEL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;model&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;AutoModelForSequenceClassification&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;from_pretrained&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BASE_MODEL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;num_labels&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;training_args&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;TrainingArguments&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;output_dir&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;checkpoints/bert_finetuned_&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;timestamp&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;/&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;learning_rate&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;LEARNING_RATE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;per_device_train_batch_size&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;BATCH_SIZE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;per_device_eval_batch_size&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;BATCH_SIZE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;num_train_epochs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;EPOCHS&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;evaluation_strategy&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;epoch&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;logging_strategy&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;epoch&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;save_strategy&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;epoch&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="c1"&gt;# metric_for_best_model=&amp;quot;mse&amp;quot;,&lt;/span&gt;
+    &lt;span class="n"&gt;greater_is_better&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;save_total_limit&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;load_best_model_at_end&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;weight_decay&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.01&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;report_to&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;none&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;trainer&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Trainer&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;training_args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;train_dataset&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;dataset_train&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;eval_dataset&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;dataset_val&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;compute_metrics&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;compute_metrics_for_regression&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;warnings&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;filterwarnings&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ignore&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;trainer&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;train&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The work flow is basically the same as how we fine-tune the ESG-BERT model. &lt;/p&gt;
+&lt;h4&gt;3.3.3. Findings&lt;/h4&gt;
+&lt;p&gt;After training the model, here is the result of the ESG Score and Risk Level predictor model in train and test dataset. On the best case scenario, &lt;strong&gt;we manage to train a model with accuracy rate of above 75% on train data and above 52% in test data, which is higher than random guess and ESG-BERT fine-tuning that only have 51% accuracy for ESG Risk Level.&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;We also noticed that the ESG score predictor is capped at 26. This might be due to the class imbalance that resulting in ESG score prediction by our model less likely to give score of higher than 26. With this, &lt;strong&gt;we calculate that our model can achieve MSE at 16.3790 and 27.7570&lt;/strong&gt; for training and testing dataset respectively, &lt;strong&gt;which is also better than ESG-BERT fine-tuning&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Train Data Prediction" src="images/TheWay_02_Img02_TrainDataPred.png" title="Train Prediction Result"&gt;
+&lt;img alt="Test Data Orediction" src="images/TheWay_02_Img03_TestDataPred.png" title="Test Prediction Result"&gt;&lt;/p&gt;
+&lt;h2&gt;4. Deployment&lt;/h2&gt;
+&lt;p&gt;Since we think that deploying the model to visualise the result would make the presentation more appealing than plain code, we deployed our model using Python Flask. &lt;/p&gt;
+&lt;p&gt;At first, the deployment model do not have a very friendly GUI. It contains only one input field and returns a JSON string after &lt;code&gt;Search&lt;/code&gt; is clicked. &lt;/p&gt;
+&lt;h3&gt;4.1. Original GUI&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="Original GUI" src="images/TheWay_02_Img04_OriGUI.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Original GUI" src="images/TheWay_02_Img05_OriGUI.png"&gt;&lt;/p&gt;
+&lt;h3&gt;4.2. What we want to achieve&lt;/h3&gt;
+&lt;p&gt;We have had some discussions and think that a GUI that looked like this would look better.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Design" src="images/TheWay_02_Img06_GUI.png"&gt;&lt;/p&gt;
+&lt;h3&gt;4.3. Leveraging GenAI&lt;/h3&gt;
+&lt;p&gt;So we put both our code + the image above into ChatGPT, and asked how we could use Bootstrap to create a GUI like the image as shown above. &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Conversation with ChatGPT&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ChatGPT" src="images/TheWay_02_Img07_Chat.png"&gt;
+&lt;img alt="ChatGPT" src="images/TheWay_02_Img08_Chat.png"&gt;
+&lt;img alt="ChatGPT" src="images/TheWay_02_Img09_Chat.png"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After prompt engineering and finetuning the code provided, we refined the GUI. Also, we added the “Download Data” function so that users can download the predicted esg risk level, esg score, and ESG-related transcript into a .txt file for further processing. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Deploy GUI" src="images/TheWay_02_Img10_Deploy.png"&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Run the python server &lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;python ./{directory}/deploy_model.py 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Open the HTML file &lt;code&gt;index.html&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt="Deployment Details" src="images/TheWay_02_Img11_Deploy.png"&gt;&lt;/p&gt;
+&lt;p&gt;Below is the workflow of the deployment: &lt;/p&gt;
+&lt;p&gt;Case I: User enters a stock symbol in the HTML form and clicked &lt;code&gt;Search&lt;/code&gt;: &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;JavaScript Handling:
+Captures the form submission and prevents default submission, sends a AJAX request with the symbol to Flask server&lt;/li&gt;
+&lt;li&gt;Python (Flask) Processing:
+Receives AJAX request -&amp;gt; Searches in our predicted risk level.csv (which is the saved output result from the previous process)  -&amp;gt; Sends back response (ESG data or error message) -&amp;gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;JavaScript Updates HTML:&lt;/p&gt;
+&lt;p&gt;Receives response from Flask server -&amp;gt; Updates HTML to display ESG data or an error message -&amp;gt; If data received, shows download button &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Case II: User clicks the &lt;code&gt;Download&lt;/code&gt; : &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;User clicks download button -&amp;gt; JavaScript triggers file download&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;5. Summary&lt;/h2&gt;
+&lt;p&gt;In this blog post, we discuss our findings and experiences in developing a good model to predict ESG risk levels by fine-tuning ESG-BERT, Llama2 and BERT. We discovered that directly fine-tuning the BERT model yielded even more promising results than fine-tuning the ESG-BERT model, which was initially expected to perform better on ESG-related tasks. As a result, we suggest focusing on this direction in future work.&lt;/p&gt;
+&lt;p&gt;And to make the presentation more appealing and showcase the results effectively, we deployed our model using Python Flask. This approach allowed us to visualise the results in a more interactive and user-friendly manner compared to plain code.&lt;/p&gt;
+&lt;p&gt;One challenge we faced was the limited performance of the Llama2 version feasible to us. Computational resources proved to be a significant issue when working on this project.&lt;/p&gt;
+&lt;p&gt;For future work, we aim to improve the accuracy of our model using BERT as the base model. To achieve this, we propose the following enhancements:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Expanding the dataset to include more companies and years of transcripts&lt;/li&gt;
+&lt;li&gt;Incorporating additional data sources such as news articles and media coverage&lt;/li&gt;
+&lt;li&gt;Conducting advanced feature engineering to explore and create additional relevant features&lt;/li&gt;
+&lt;li&gt;Leveraging domain knowledge and external data sources to enrich the feature set&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;By implementing these improvements, we hope to develop a more robust and accurate ESG risk level prediction model, ultimately providing investors with a valuable tool for evaluating companies' sustainability performance.&lt;/p&gt;</content><category term="Progress Report"></category><category term="Group TheWay"></category></entry><entry><title>Review &amp; Reflection Part 2 - ESG News and Stock Volatility (by Group "ESG &amp; Volatility")</title><link href="https://buehlmaier.github.io/FINA4350-student-blog-2024-01/review-reflection-part-2-esg-news-and-stock-volatility-by-group-esg-volatility.html" rel="alternate"></link><published>2024-04-29T22:07:00+08:00</published><updated>2024-04-29T22:07:00+08:00</updated><author><name>Group ESG &amp; Volatility</name></author><id>tag:buehlmaier.github.io,2024-04-29:/FINA4350-student-blog-2024-01/review-reflection-part-2-esg-news-and-stock-volatility-by-group-esg-volatility.html</id><summary type="html">&lt;p&gt;For this blog post, we will provide a cumulative review and reflection on our project, 'ESG &amp;amp; Volatility,' specifically on the Sentiment Analysis and Stock Volatility portion of our project. &lt;/p&gt;
 &lt;h2&gt;Sentiment Analysis:&lt;/h2&gt;
 &lt;p&gt;Using the cleaned text data, we then conducted sentiment analysis on the news articles by using Vader from NLTK …&lt;/p&gt;</summary><content type="html">&lt;p&gt;For this blog post, we will provide a cumulative review and reflection on our project, 'ESG &amp;amp; Volatility,' specifically on the Sentiment Analysis and Stock Volatility portion of our project. &lt;/p&gt;
 &lt;h2&gt;Sentiment Analysis:&lt;/h2&gt;
